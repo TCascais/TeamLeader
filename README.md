@@ -30,6 +30,5 @@ $ vendor\bin\phpunit
 ```
 
 ### Tools used
-Tools: </br>
 - PHPUnit for unit testing
 - Draw.io for the classdiagram
