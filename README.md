@@ -1,5 +1,6 @@
 # TeamLeader Discount Assignment
-This is the result for the assignment created by log.
+This is the result for the discounts assignment created by Teamleader. </br>
+The code is commented, for more details I suggest looking at the code.
 
 ## Folder Structure
 The assignment consists of the following folder structure: </br></br>
