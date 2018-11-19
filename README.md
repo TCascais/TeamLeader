@@ -2,7 +2,7 @@
 This is the result for the discounts assignment created by Teamleader. </br>
 The code is commented, for more details I suggest looking at the code. <br><br>
 
-For a quick view on the classes, see classdiagram.pdf. </br>
+For a quick view on the classes, see classdiagram.jpeg </br>
 
 ## Folder Structure
 The assignment consists of the following folder structure: </br></br>
@@ -30,4 +30,6 @@ $ vendor\bin\phpunit
 ```
 
 ### Tools used
-The only tool that has been used was PHPUnit for the unit tests.
+Tools: </br>
+- PHPUnit for unit testing
+- Draw.io for the classdiagram
