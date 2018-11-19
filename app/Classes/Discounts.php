@@ -8,7 +8,8 @@ class Discounts
     public $order;
 
     /* Sets the order to be calculated */
-    public function setOrder($order){
+    public function setOrder($order)
+    {
 
         /* Set the order as the given $order object. */
         $this->order = $order;
@@ -38,11 +39,10 @@ class Discounts
             /* Subtract the discount from the discountedTotal. */
             $this->order['discountedTotal'] = $this->order['discountedTotal'] - $this->order['customerDiscount'];
         }
-
     }
 
     /* Function to calculate the product discount for given category. (Category-id, Required_Quantity_for_discount, Products)*/
-    public function calcProductDiscountByCategory($category_id, $discountQuantity,Products $products)
+    public function calcProductDiscountByCategory($categoryId, $discountQuantity,Products $products)
     {
         /* Define $productCategoryItems as empty array */
         $productCategoryItems = [];
@@ -59,7 +59,7 @@ class Discounts
             /*  If the product category is the same as the given category 
                 AND the item Quantity is equal or greater than the Required amount for discount,
                 Poplulate the $productCategoryItems array with the item properties. */
-            if($product['category'] == $category_id && $item['quantity'] >= $discountQuantity)
+            if($product['category'] == $categoryId && $item['quantity'] >= $discountQuantity)
             {
                 $productCategoryItems[$i]['product-id'] = $item['product-id'];
                 $productCategoryItems[$i]['quantity'] = $item['quantity'];
@@ -75,7 +75,8 @@ class Discounts
             /* Sort the array ascending by price. */
             array_multisort(array_column($productCategoryItems, "price"), SORT_ASC, $productCategoryItems);
 
-            /* Calculate the discount. Which is 20% of the cheapest product's total. */
+            /* Calculate the discount. Which is 20% of the cheapest product's total. 
+               (For future reference, the 20% could be changed to a variable) */
             $discount = $productCategoryItems[0]['total'] * 0.2;
 
             /* Format $discount to only have 2 decimals. */
@@ -99,7 +100,7 @@ class Discounts
     }
 
     /* Function to calculate the free product discount. (CategoryID_For_Discount, Required_Quantity_For_Discount, Products) */
-    public function calcFreeProductDiscount($category_id, $discountAmount,Products $products)
+    public function calcFreeProductDiscount($categoryId, $discountAmount,Products $products)
     {
         /* For each item in order, proceed. */
         foreach($this->order['items'] as $item)
@@ -109,7 +110,7 @@ class Discounts
 
             /*  If the product category matches the given categoryID for discount
                 AND the item quantity is equal or greater than Required_Quantity_For_Discount, proceed. */
-            if($product['category'] == $category_id && $item['quantity'] >= $discountAmount)
+            if($product['category'] == $categoryId && $item['quantity'] >= $discountAmount)
             {
                 /*  Free quantity is the bought items /  Required_Quantity_For_Discount. 
                     This is floored since it needs to be rounded down to a whole number. */
@@ -132,7 +133,7 @@ class Discounts
 
     /* Return the calculated order */
     public function getCalculatedOrder()
-    {   
+    {  
         return $this->order;
     }
 

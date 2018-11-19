@@ -1,0 +1,21 @@
+{
+    "id": "2",
+    "customer-id": "2",
+    "items": [
+        {
+            "product-id": "B102",
+            "quantity": "5",
+            "unit-price": "4.99",
+            "total": "24.95"
+        }
+    ],
+    "total": "24.95",
+    "discountedTotal": 22.45,
+    "customerDiscount": "2.50",
+    "free": [
+        {
+            "product-id": "B102",
+            "freeQuantity": 1
+        }
+    ]
+}

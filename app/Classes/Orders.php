@@ -26,7 +26,6 @@ class Orders
         }
     
         $this->orders = $ordersArray;
-
     }
 
     public function getOrders(){

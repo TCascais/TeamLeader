@@ -37,7 +37,6 @@ class Products
         }
 
         return $productResult;
-
     }
 
 }
