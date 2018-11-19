@@ -3,14 +3,14 @@ This is the result for the assignment created by log.
 
 ## Folder Structure
 The assignment consists of the following folder structure:
-App\Classes 		: Contains the classes to perform the discounts.
-App\data		: Contains the Customers and Products JSON files.
-App\discounted-orders	: The folder in which the new discounted orders are placed.
-App\example-orders	: Contains the example orders provided by Teamleader.
+App\Classes 		: Contains the classes to perform the discounts. </br>
+App\data		: Contains the Customers and Products JSON files. </br>
+App\discounted-orders	: The folder in which the new discounted orders are placed. </br>
+App\example-orders	: Contains the example orders provided by Teamleader. </br>
 
-Tests\			: Contains the unit tests.
+Tests\			: Contains the unit tests. </br></br>
 
-Vendor\ 		: Contains all the composer package files for PHP unit.
+Vendor\ 		: Contains all the composer package files for PHP unit. </br></br>
 
 ## Getting started
 The App folder containts an index.php. This file was created to show the start and the endresult. 
